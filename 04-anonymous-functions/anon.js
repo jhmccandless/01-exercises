@@ -99,16 +99,33 @@ console.log(r5, r6);
 // passing anonymous functions
 const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-console.log(isEven(5));
-// console.log(isOdd(5));
+const isEven = function (num) {
+  const even = num % 2 !== 1;
+  return even;
+};
+
+const isOdd = function (num) {
+  const odd = num % 2 !== 0;
+  return odd;
+};
+// console.log(isEven(5));
+// console.log(isOdd(4));
 
 const filter = function (arr, fn) {
   const result = [];
   for (let i = 0; i < arr.length; i++) {
-    result.push(fn(arr[i]));
+    if (fn(arr[i])) {
+      result.push(arr[i]);
+    }
   }
   return result;
 };
 
-// const result = filter(nums, isEven);
-// console.log(result);
+const r6 = filter(nums, isEven);
+const r7 = filter(nums, isOdd);
+console.log(r6, r7);
+
+const greetings = ["hello", "how are you?", "good to see you!"];
+const result = map(greetings, (s) => s.toUpperCase());
+console.log(result);
+console.log(greetings);
