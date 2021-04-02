@@ -1,37 +1,75 @@
-# Javascript Exercises
+"use strict";
 
-Hand in the exercises by 4/6/2021
+// # Javascript Exercises
+// Hand in the exercises by 4/6/2021
 
-## Madlib
+/*
+// ## Madlib
 
-Write a `madlib` function, which is given a name and a subject. It will return(not print) a new string: (name)'s favorite subject in school is (subject).
+// Write a `madlib` function, which is given a name and a subject. It will return(not print) a new string: (name)'s favorite subject in school is (subject).
 
-Example:
+// Example:
 
-```javascript
-> madlib('Anushka', 'art');
-'Anushka's favorite subject in school is art.'
-```
+// ```javascript
+// > madlib('Anushka', 'art');
+// 'Anushka's favorite subject in school is art.'
+// ```
 
-const madlib = function(name, subject) {
+const madlib = function (name, subject) {
+  return `${name}'s favorite subject in school is ${subject}.`;
+};
 
-}
+console.log(madlib("Jason", "math"));
+*/
 
-## Tip Calculator
+// ## Tip Calculator
 
-Write a function `tipAmount` that is given the bill amount and the level of service (one of good, fair and poor) and returns the dollar amount for the tip. Based on:
+// Write a function `tipAmount` that is given the bill amount and the level of service (one of good, fair and poor) and returns the dollar amount for the tip. Based on:
 
-- good -> 20%
-- fair -> 15%
-- bad -> 10%
+// - good -> 20%
+// - fair -> 15%
+// - bad -> 10%
 
-```
-> tipAmount(100, 'good')
-20
-> tipAmount(40, 'fair')
-6
-```
+// ```
+// > tipAmount(100, 'good')
+// 20
+// > tipAmount(40, 'fair')
+// 6
+// ```
 
+const tipAmount = function (bill, service) {
+  let tipPercent;
+  if (service === "good") {
+    tipPercent = 0.2;
+  } else if (service === "fair") {
+    tipPercent = 0.15;
+  } else if (service === "bad") {
+    tipPercent = 0.1;
+  }
+  const tip = bill * tipPercent;
+  const total = bill + tip;
+  return `The bill was $${bill} with ${service} service earning a tip of ${
+    tipPercent * 100
+  }% making the total $${total}.`;
+};
+
+console.log(tipAmount(30, "bad"));
+
+// const custService = {
+//   good: 0.2,
+//   fair: 0.15,
+//   bad: 0.1,
+// };
+// const percentages = Object.entries(custService);
+// console.log(percentages);
+
+// const tipAmount = function (bill, service) {
+//   bill = 100;
+//   service = percentages[i];
+// };
+// console.log(tipAmount(30, "fair"));
+
+/*
 ## Tip Calculator 2
 
 Write a function `totalAmount` that takes the same arguments as `tipAmount` except it returns the total as the tip amount plus the bill amount. This function may make use of tipAmount as a sub-task.
@@ -328,3 +366,4 @@ Allow the caller of counter to initialize the count to the first argument that's
 > count1()
 6
 ```
+*/
