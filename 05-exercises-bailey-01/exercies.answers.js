@@ -22,6 +22,7 @@ const madlib = function (name, subject) {
 console.log(madlib("Jason", "math"));
 */
 
+/*
 // ## Tip Calculator
 
 // Write a function `tipAmount` that is given the bill amount and the level of service (one of good, fair and poor) and returns the dollar amount for the tip. Based on:
@@ -37,6 +38,10 @@ console.log(madlib("Jason", "math"));
 // 6
 // ```
 
+
+const recipt = 45;
+const server = "good";
+
 const tipAmount = function (bill, service) {
   let tipPercent;
   if (service === "good") {
@@ -47,29 +52,33 @@ const tipAmount = function (bill, service) {
     tipPercent = 0.1;
   }
   const tip = bill * tipPercent;
-  const total = bill + tip;
-  return `The bill was $${bill} with ${service} service earning a tip of ${
-    tipPercent * 100
-  }% making the total $${total}.`;
+  return tip;
 };
 
-console.log(tipAmount(30, "bad"));
+console.log(tipAmount(recipt, server));
 
 // const custService = {
 //   good: 0.2,
 //   fair: 0.15,
 //   bad: 0.1,
 // };
-// const percentages = Object.entries(custService);
-// console.log(percentages);
+// const percentages = Object.keys(custService);
 
-// const tipAmount = function (bill, service) {
-//   bill = 100;
-//   service = percentages[i];
+// const tipCalc = function (bill, service) {
+//   bill = recipt;
+//   let tipPerc = 0;
+//   for (let i = 0; i < percentages.length; i++) {
+//     if ((percentages[i] = service)) {
+//       tipPerc = custService[percentages[i]];
+//     }
+//   }
+//   let tip = bill * tipPerc;
+//   return `Wtha a bill of $${bill}, the tip is ${tip}.`;
 // };
-// console.log(tipAmount(30, "fair"));
+// console.log(tipCalc(recipt, "fair"));
 
-/*
+
+
 ## Tip Calculator 2
 
 Write a function `totalAmount` that takes the same arguments as `tipAmount` except it returns the total as the tip amount plus the bill amount. This function may make use of tipAmount as a sub-task.
@@ -81,6 +90,27 @@ Write a function `totalAmount` that takes the same arguments as `tipAmount` exce
 46
 ```
 
+const recipt = 45;
+const server = "good";
+
+const totalAmount = function (bill, service) {
+  let tipPercent;
+  if (service === "good") {
+    tipPercent = 0.2;
+  } else if (service === "fair") {
+    tipPercent = 0.15;
+  } else if (service === "bad") {
+    tipPercent = 0.1;
+  }
+  const tip = bill * tipPercent;
+  const total = bill + tip;
+  return `With a bill of $${bill}, the tip is ${tip} and the total is ${total}.`;
+};
+
+console.log(totalAmount(recipt, server));
+*/
+
+/*
 ## Print Numbers
 
 Write a function printNumbers which is given a start number and an end number. It will print the numbers from one to the other, one per line:
@@ -101,6 +131,26 @@ Write a function printNumbers which is given a start number and an end number. I
 
 Write two versions of the above function. One using a while loop and the other using a for loop.
 
+
+const printNumbers = function (start, end) {
+  for (let i = start; i <= end; i++) {
+    console.log(i);
+  }
+};
+printNumbers(1, 10);
+
+const printNumbersWhile = function (start, end) {
+  let i = start;
+  while (i <= end) {
+    console.log(i);
+    i++;
+  }
+};
+
+printNumbersWhile(1, 10);
+*/
+
+/*
 ## Print a Square
 
 Write a function `printSquare` which is given a size and prints a square of that size using asterisks.
@@ -114,18 +164,64 @@ Write a function `printSquare` which is given a size and prints a square of that
 *****
 ```
 
-## Print a box
+const printSquare = function (size) {
+  let arr = [];
+  for (let i = 0; i < size; i++) {
+    arr.push("*");
+  }
+  const x = arr.join("");
+  for (let i = 0; i < arr.length; i++) {
+    console.log(x);
+  }
+};
 
+printSquare(5);
+// console.log("*", "*", "*", "*", "*");
+// console.log("* * * * *");
+*/
+
+/*
+## Print a box
 Write function `printBox` which is given a width and height and prints a hollow box of those given dimensions.
 
 ```
+
 > printBox(6, 4)
 ******
 *    *
 *    *
 ******
 ```
+*/
+const printBox = function (width, hieght) {
+  let arrEnd = [];
+  let arrMid = [];
+  for (let i = 0; i < width; i++) {
+    arrEnd.push("*");
+    if (i === 0) {
+      arrMid.push("*");
+    } else if (i === width - 1) {
+      arrMid.push("*");
+    } else {
+      arrMid.push(" ");
+    }
+  }
+  console.log(arrEnd, arrMid);
+  const x = arrEnd.join("");
+  const y = arrMid.join("");
+  for (let i = 0; i < hieght; i++) {
+    if (i === 0) {
+      console.log(x);
+    } else if (i === hieght - 1) {
+      console.log(x);
+    } else {
+      console.log(y);
+    }
+  }
+};
 
+console.log(printBox(8, 10));
+/*
 ## Print a Banner
 
 Write a function printBanner which is given some text and prints a banner with a border surrounding the text. The border has to stretch to the length of the text.
