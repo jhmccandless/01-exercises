@@ -439,7 +439,7 @@ var cities = [
 ```
 
 as input and returns a new array containing the cities whose temperature is cooler than 70 degrees.
-*/
+
 
 var cities = [
   { name: "Los Angeles", temperature: 60.0 },
@@ -459,6 +459,7 @@ const mildCities = function (city) {
 };
 
 mildCities(cities);
+*/
 
 /*
 ## Good Job!
@@ -487,14 +488,87 @@ var people = [
 
 Print out `'Good Job, {{name}}!'` for each person's name, one on a line.
 
+var people = [
+  "Dom",
+  "Lyn",
+  "Kirk",
+  "Autumn",
+  "Trista",
+  "Jesslyn",
+  "Kevin",
+  "John",
+  "Eli",
+  "Juan",
+  "Robert",
+  "Keyur",
+  "Jason",
+  "Che",
+  "Ben",
+];
+
+for (const individual of people) {
+  console.log(`Good Job, ${individual}!`);
+}
+*/
+
+/*
 ## Sort an array
 
 Given an array of strings such the array of names given in the previous problem, sort them by alphabetically order.
 
+var people = [
+  "Dom",
+  "Lyn",
+  "Kirk",
+  "Autumn",
+  "Trista",
+  "Jesslyn",
+  "Kevin",
+  "John",
+  "Eli",
+  "Juan",
+  "Robert",
+  "Keyur",
+  "Jason",
+  "Che",
+  "Ben",
+];
+
+people.sort();
+console.log(people);
+*/
+
+/*
 ## Sort an array, 2
 
 Sort the same array, but not by alphabetically order, but by how long each name is, shortest name first.
 
+var people = [
+  "Dom",
+  "Lyn",
+  "Kirk",
+  "Autumn",
+  "Trista",
+  "Jesslyn",
+  "Kevin",
+  "John",
+  "Eli",
+  "Juan",
+  "Robert",
+  "Keyur",
+  "Jason",
+  "Che",
+  "Ben",
+];
+
+people.sort(function (a, b) {
+  return a.length - b.length;
+});
+
+console.log(people);
+*/
+
+/*
 ## 3 times
 
 Given this function:
@@ -509,6 +583,18 @@ function call3Times(fun) {
 
 Use the `call3Times` function to print "Hello, world!" 3 times.
 
+const str = function () {
+  console.log("Hello, world!");
+};
+function call3Times(fun) {
+  fun();
+  fun();
+  fun();
+}
+call3Times(str);
+*/
+
+/*
 ## n times
 
 You will write a function callNTimes that takes two arguments: times as a number, and fun as a function. It will call that function for that many times. Example:
@@ -524,6 +610,18 @@ Hello, world!
 
 You are allowed to use a loop in the implementation of callNTimes.
 
+const str = function () {
+  console.log("Hello, world!");
+};
+function callNTimes(fun, n) {
+  for (let i = 0; i < n; i++) {
+    fun();
+  }
+}
+callNTimes(str, 5);
+*/
+
+/*
 ## Sum an array
 
 Write a function sum that takes an array of numbers as argument and returns the sum of those numbers. Use the reduce method to do this.
@@ -533,6 +631,20 @@ Write a function sum that takes an array of numbers as argument and returns the 
 6
 ```
 
+let nums = [1, 2, 3];
+const sum = function () {
+  const total = function (init, el) {
+    return init + el;
+  };
+  let summation = nums.reduce(total);
+  
+  console.log(summation);
+};
+
+sum(nums);
+*/
+
+/*
 ## Acronym
 
 Write a function acronym that takes an array of words as argument and returns the acronym of the words. Use the reduce method to do this.
@@ -544,6 +656,25 @@ Write a function acronym that takes an array of words as argument and returns th
 'NASA'
 ```
 
+const words = ["very", "important", "person"];
+const words2 = ["national", "aeronautics", "space", "administration"];
+const acronym = function (arr) {
+  const wordBegin = [];
+  for (let i = 0; i < arr.length; i++) {
+    wordBegin.push(arr[i][0]);
+  }
+  const allFirstLetters = function (init, el) {
+    return init + el;
+  };
+  const summation = wordBegin.reduce(allFirstLetters).toUpperCase();
+  console.log(summation);
+};
+
+acronym(words);
+acronym(words2);
+*/
+
+/*
 ## Bonus: forEach
 
 Implement your own custom `forEach` function which takes two arguments: an array `arr` and a function `fun`. It will call fun passing each item in `arr` to `fun` as the first argument. Example:
@@ -591,6 +722,23 @@ Make a counter function that returns a function that returns a successive number
 3
 ```
 
+function counter(x) {
+  x = 0;
+  return function () {
+    return (x += 1);
+  };
+}
+
+const count1 = counter();
+const count2 = counter();
+console.log(count1());
+console.log(count1());
+console.log(count2());
+console.log(count2());
+console.log(count1());
+*/
+
+/*
 ## Counter 2
 
 Allow the caller of counter to initialize the count to the first argument that's passed in.
@@ -602,4 +750,14 @@ Allow the caller of counter to initialize the count to the first argument that's
 > count1()
 6
 ```
+function counter(x) {
+  x;
+  return function () {
+    return (x += 1);
+  };
+}
+
+const count1 = counter(4);
+console.log(count1());
+console.log(count1());
 */
