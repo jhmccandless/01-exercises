@@ -192,7 +192,7 @@ Write function `printBox` which is given a width and height and prints a hollow 
 *    *
 ******
 ```
-*/
+
 const printBox = function (width, hieght) {
   let arrEnd = [];
   let arrMid = [];
@@ -221,6 +221,8 @@ const printBox = function (width, hieght) {
 };
 
 console.log(printBox(8, 10));
+*/
+
 /*
 ## Print a Banner
 
@@ -233,6 +235,31 @@ Write a function printBanner which is given some text and prints a banner with a
 ****************************
 ```
 
+const banner = "Welcom to DigitalCrafts";
+const printBanner = function (str) {
+  // declaration banner line
+  let arrMid = [];
+  let arrEnd = [];
+  for (let i = 0; i < str.length; i++) {
+    arrMid.push(str[i]);
+  }
+  arrMid.push(" ", "*");
+  arrMid.unshift("*", " ");
+  // console.log(arrMid);
+  for (let i = 0; i < arrMid.length; i++) {
+    arrEnd.push("*");
+  }
+  const x = arrEnd.join("");
+  const y = arrMid.join("");
+  console.log(x);
+  console.log(y);
+  console.log(x);
+};
+
+printBanner(banner);
+*/
+
+/*
 ## Leetspeak
 
 Write a function `leetspeak` which is given a string, and returns the leetspeak equivalent of the string. To convert text to its leetspeak version, make the following substitutions:
@@ -249,8 +276,35 @@ Write a function `leetspeak` which is given a string, and returns the leetspeak 
 > leetspeak('Leet')
 l337
 ```
+const string = "leet";
+const leatTrans = {
+  A: 4,
+  E: 3,
+  G: 6,
+  I: 1,
+  O: 0,
+  S: 5,
+  T: 7,
+};
+const leespeak = function (str) {
+  const strUC = str.toUpperCase();
+  let strUpdate = [];
+  for (let i = 0; i < strUC.length; i++) {
+    if (leatTrans[strUC[i]]) {
+      strUpdate.push(leatTrans[strUC[i]]);
+    } else {
+      const toLC = strUC[i].toLowerCase();
+      strUpdate.push(toLC);
+    }
+  }
+  const x = strUpdate.join("");
+  console.log(x);
+};
+leespeak(string);
+*/
 
-## Long-long Vowels
+/*
+////////////////////////////////////////////## Long-long Vowels
 
 Write a function, which is given a string, return the result of extending any long vowels to the length of 5.
 
@@ -262,7 +316,25 @@ Write a function, which is given a string, return the result of extending any lo
 > longLongVowels('Man')
 'Man'
 ```
+const word = "Man";
+// const vowelExt = 5;
+const longVowels = function (str) {
+  const longWord = [];
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === str[i + 1]) {
+      longWord.push(str[i], str[i], str[i], str[i]);
+    } else {
+      longWord.push(str[i]);
+    }
+  }
+  const backToStr = longWord.join("");
+  console.log(backToStr);
+};
 
+longVowels(word);
+*/
+
+/*
 ## Just the positives
 
 Write a function positiveNumbers which is given an array of numbers and returns a new array containing only the positive numbers within the given array.
@@ -276,7 +348,21 @@ Write a function positiveNumbers which is given an array of numbers and returns 
 []
 ```
 
-## Bonus: Caesar Cipher
+const positiveNumbers = function (arr) {
+  const posArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] >= 0) {
+      posArr.push(arr[i]);
+    }
+  }
+  console.log(posArr);
+};
+
+positiveNumbers([-1, -2, -3]);
+*/
+
+/*
+//////////////////////////////////////////////////////## Bonus: Caesar Cipher
 
 Write a function cipher which is given a string, an offset, and returns the Caesar cipher of the string.
 
@@ -284,7 +370,12 @@ Write a function cipher which is given a string, an offset, and returns the Caes
 > cipher('Genius without education is like silver in the mine')
 'Travhf jvgubhg rqhpngvba vf yvxr fvyire va gur zvar'
 ```
+const letterCiph = {};
 
+console.log(letterCiph);
+*/
+
+/*
 ## Bonus: Caesar Cipher 2
 
 Write a function decipher which is given a string, an offset, and returns the original message.
@@ -295,6 +386,8 @@ Write a function decipher which is given a string, an offset, and returns the or
 ```
 
 # Function Exercises
+//////////////////////////////////////////////////
+try destructuring!!
 
 Implement all of the following problems without using a while or a for loop unless you were explicitly asked to use loops.
 
@@ -302,10 +395,36 @@ Implement all of the following problems without using a while or a for loop unle
 
 Write a function which takes an array of numbers as input and returns a new array containing only the even numbers in the given array.
 
+const evenNumber = function (arr) {
+  const evenArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (!(arr[i] % 2)) {
+      evenArr.push(arr[i]);
+    }
+  }
+  console.log(evenArr);
+};
+
+evenNumber([-2, 3, 4, 5, 6]);
+*/
+
+/*
 ## Square the Numbers
 
 Write a function which takes an array of numbers as input and returns a new array containing result of squaring each of the numbers in the given array by two. Example: `squareTheNumbers([1, 2, 3])` should give `[1, 4, 9]`.
 
+const numSquare = function (arr) {
+  const evenArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    evenArr.push(arr[i] * arr[i]);
+  }
+  console.log(evenArr);
+};
+
+numSquare([-2, 3, 4, 5, 6]);
+*/
+
+/*
 ## Cities
 
 Write a function which takes an array of city objects like such:
@@ -320,7 +439,28 @@ var cities = [
 ```
 
 as input and returns a new array containing the cities whose temperature is cooler than 70 degrees.
+*/
 
+var cities = [
+  { name: "Los Angeles", temperature: 60.0 },
+  { name: "Atlanta", temperature: 52.0 },
+  { name: "Detroit", temperature: 48.0 },
+  { name: "New York", temperature: 80.0 },
+];
+
+const mildCities = function (city) {
+  const cities = [];
+  for (let i = 0; i < city.length; i++) {
+    if (city[i].temperature < 70) {
+      cities.push(city[i].name);
+    }
+  }
+  console.log(cities);
+};
+
+mildCities(cities);
+
+/*
 ## Good Job!
 
 Given an array of people's names:
