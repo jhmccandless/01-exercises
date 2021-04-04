@@ -370,10 +370,49 @@ Write a function cipher which is given a string, an offset, and returns the Caes
 > cipher('Genius without education is like silver in the mine')
 'Travhf jvgubhg rqhpngvba vf yvxr fvyire va gur zvar'
 ```
-const letterCiph = {};
-
-console.log(letterCiph);
 */
+const alph = "abcdefghijklmnopqrstuvwxyz";
+const string = "Geius without education is like silver in the mine";
+const [...alphArr] = alph;
+const [...origAlph] = alph;
+
+const cipher = function (str, offset) {
+  let codeStr = [];
+  let upperCaseIndex = [];
+  const upperCaseCheck = function (stringArray) {
+    for (let i = 0; i < stringArray.length; i++) {
+      if (
+        stringArray[i] == stringArray[i].toUpperCase() &&
+        stringArray[i] !== " "
+      ) {
+        upperCaseIndex.push(i);
+      }
+    }
+  };
+  upperCaseCheck(string);
+  const alphToCipher = function (alphebet) {
+    for (let i = 0; i < alphebet.length - offset; i++) {
+      alphArr.push(alphebet[i]);
+      alphArr.shift(alphebet);
+    }
+  };
+  alphToCipher(alph);
+  const [...strArr] = str.toLowerCase();
+  for (let i = 0; i < strArr.length; i++) {
+    let letter = alphArr[origAlph.indexOf(strArr[i])];
+    if (upperCaseIndex.includes(i)) {
+      let letterToUC = letter.toUpperCase();
+      codeStr.push(letterToUC);
+    } else if (strArr[i] !== " ") {
+      codeStr.push(letter);
+    } else {
+      codeStr.push(" ");
+    }
+  }
+  console.log(codeStr.join(""));
+};
+
+cipher(string, 13);
 
 /*
 ## Bonus: Caesar Cipher 2
