@@ -461,8 +461,7 @@ Write a function decipher which is given a string, an offset, and returns the or
 ```
 
 # Function Exercises
-//////////////////////////////////////////////////
-try destructuring!!
+
 
 Implement all of the following problems without using a while or a for loop unless you were explicitly asked to use loops.
 
@@ -471,17 +470,27 @@ Implement all of the following problems without using a while or a for loop unle
 
 Write a function which takes an array of numbers as input and returns a new array containing only the even numbers in the given array.
 
+//////////////////////////////////////////
+////////// answer ////////////////////////
 const evenNumber = function (arr) {
+  const arrStr = [];
+  const arrLastDig = [];
   const evenArr = [];
   for (let i = 0; i < arr.length; i++) {
-    if (!(arr[i] % 2)) {
+    arrStr.push(arr[i].toString());
+  }
+  for (let i = 0; i < arrStr.length; i++) {
+    arrLastDig.push(Number(arrStr[i][arrStr[i].length - 1]));
+  }
+  for (let i = 0; i < arrLastDig.length; i++) {
+    if (!(arrLastDig[i] % 2)) {
       evenArr.push(arr[i]);
     }
   }
   console.log(evenArr);
 };
 
-evenNumber([-2, 3, 4, 5, 6]);
+evenNumber([-2, 3.4, 4, 5.2, 6]);
 */
 
 /*
@@ -490,15 +499,17 @@ evenNumber([-2, 3, 4, 5, 6]);
 
 Write a function which takes an array of numbers as input and returns a new array containing result of squaring each of the numbers in the given array by two. Example: `squareTheNumbers([1, 2, 3])` should give `[1, 4, 9]`.
 
+//////////////////////////////////////////
+////////// answer ////////////////////////
 const numSquare = function (arr) {
   const evenArr = [];
   for (let i = 0; i < arr.length; i++) {
-    evenArr.push(arr[i] * arr[i]);
+    evenArr.push(arr[i] ** 2);
   }
   console.log(evenArr);
 };
 
-numSquare([-2, 3, 4, 5, 6]);
+numSquare([-2, 3, 4, -25, 6]);
 */
 
 /*
@@ -518,7 +529,8 @@ var cities = [
 
 as input and returns a new array containing the cities whose temperature is cooler than 70 degrees.
 
-
+//////////////////////////////////////////
+////////// answer ////////////////////////
 var cities = [
   { name: "Los Angeles", temperature: 60.0 },
   { name: "Atlanta", temperature: 52.0 },
@@ -527,13 +539,13 @@ var cities = [
 ];
 
 const mildCities = function (city) {
-  const cities = [];
+  const cityNames = [];
   for (let i = 0; i < city.length; i++) {
     if (city[i].temperature < 70) {
-      cities.push(city[i].name);
+      cityNames.push(city[i].name);
     }
   }
-  console.log(cities);
+  console.log(cityNames);
 };
 
 mildCities(cities);
@@ -566,8 +578,9 @@ var people = [
 ```
 
 Print out `'Good Job, {{name}}!'` for each person's name, one on a line.
-
-var people = [
+//////////////////////////////////////////
+////////// answer ////////////////////////
+const people = [
   "Dom",
   "Lyn",
   "Kirk",
@@ -596,7 +609,9 @@ for (const individual of people) {
 
 Given an array of strings such the array of names given in the previous problem, sort them by alphabetically order.
 
-var people = [
+//////////////////////////////////////////
+////////// answer ////////////////////////
+const people = [
   "Dom",
   "Lyn",
   "Kirk",
@@ -624,7 +639,10 @@ console.log(people);
 
 Sort the same array, but not by alphabetically order, but by how long each name is, shortest name first.
 
-var people = [
+
+//////////////////////////////////////////
+////////// answer ////////////////////////
+const people = [
   "Dom",
   "Lyn",
   "Kirk",
@@ -673,6 +691,7 @@ function call3Times(fun) {
   fun();
   fun();
 }
+
 call3Times(str);
 */
 
@@ -693,6 +712,8 @@ Hello, world!
 
 You are allowed to use a loop in the implementation of callNTimes.
 
+//////////////////////////////////////////
+////////// answer ////////////////////////
 const str = function () {
   console.log("Hello, world!");
 };
@@ -715,13 +736,15 @@ Write a function sum that takes an array of numbers as argument and returns the 
 6
 ```
 
-let nums = [1, 2, 3];
+//////////////////////////////////////////
+////////// answer ////////////////////////
+const nums = [5, 2, 3];
 const sum = function () {
   const total = function (init, el) {
     return init + el;
   };
   let summation = nums.reduce(total);
-  
+
   console.log(summation);
 };
 
@@ -741,6 +764,8 @@ Write a function acronym that takes an array of words as argument and returns th
 'NASA'
 ```
 
+//////////////////////////////////////////
+////////// answer ////////////////////////
 const words = ["very", "important", "person"];
 const words2 = ["national", "aeronautics", "space", "administration"];
 const acronym = function (arr) {
@@ -809,8 +834,10 @@ Make a counter function that returns a function that returns a successive number
 3
 ```
 
-function counter(x) {
-  x = 0;
+//////////////////////////////////////////
+////////// answer ////////////////////////
+function counter() {
+  let x = 0;
   return function () {
     return (x += 1);
   };
@@ -838,8 +865,12 @@ Allow the caller of counter to initialize the count to the first argument that's
 > count1()
 6
 ```
+
+//////////////////////////////////////////
+////////// answer ////////////////////////
+
 function counter(x) {
-  x;
+
   return function () {
     return (x += 1);
   };
