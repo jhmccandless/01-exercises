@@ -447,7 +447,7 @@ const cipher = function (str, offset) {
 };
 
 cipher(string, 13);
-*/
+
 
 /*
 **********************************************************************************************
@@ -460,6 +460,58 @@ Write a function decipher which is given a string, an offset, and returns the or
 'Genius without education is like silver in the mine'
 ```
 
+
+//////////////////////////////////////////
+////////// answer ////////////////////////
+// **********
+// able to use the same code from cipher??? just changed the name to decipher
+// **********
+
+const alph = "abcdefghijklmnopqrstuvwxyz";
+const string = "Travhf jvgubhg rqhpngvba vf yvxr fvyire va gur zvar";
+const [...alphArr] = alph;
+const [...origAlph] = alph;
+
+const decipher = function (str, offset) {
+  const codeStr = [];
+  const upperCaseIndex = [];
+  const upperCaseCheck = function (stringArray) {
+    for (let i = 0; i < stringArray.length; i++) {
+      if (
+        stringArray[i] == stringArray[i].toUpperCase() &&
+        stringArray[i] !== " "
+      ) {
+        upperCaseIndex.push(i);
+      }
+    }
+  };
+  upperCaseCheck(string);
+  const alphToCipher = function (alphebet) {
+    for (let i = 0; i < alphebet.length - offset; i++) {
+      alphArr.push(alphebet[i]);
+      alphArr.shift(alphebet);
+    }
+  };
+  alphToCipher(alph);
+  const [...strArr] = str.toLowerCase();
+  for (let i = 0; i < strArr.length; i++) {
+    let letter = alphArr[origAlph.indexOf(strArr[i])];
+    if (upperCaseIndex.includes(i)) {
+      let letterToUC = letter.toUpperCase();
+      codeStr.push(letterToUC);
+    } else if (strArr[i] !== " ") {
+      codeStr.push(letter);
+    } else {
+      codeStr.push(" ");
+    }
+  }
+  console.log(codeStr.join(""));
+};
+
+decipher(string, 13);
+*/
+
+/*
 # Function Exercises
 
 
@@ -812,6 +864,16 @@ Hello, Joe!
 
 You can use a loop in the implementation of this function.
 
+//////////////////////////////////////////
+////////// answer ////////////////////////
+const arr = [{ name: "Bob" }, { name: "Alice" }, { name: "Joe" }];
+
+const forEach = function (list, func) {
+  for (let i = 0; i < list.length; i++) {
+    func(list[i]);
+  }
+};
+/*
 # Closure Exercises
 
 **********************************************************************************************
