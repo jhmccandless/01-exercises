@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        nav {
+            border: 1px;
+            padding: 6px;
+        }
+         
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>User Information</legend>
+        <p>
+          <label for="first-name"> First Name </label>
+          <input type="text" name="first-name" id="first-name" />
+        </p>
+        <p>
+          <label for="last-name"> Last Name </label>
+          <input type="text" name="Last-name" id="Last-name" />
+        </p>
+        <p>
+          <label for="address"> Home Address </label>
+          <input type="text" name="address" id="address" />
+        </p>
+        <p>
+          <label>
+            User Name
+            <input type="text" id="name" name="user-name" />
+            <label></label
+          ></label>
+        </p>
+      </fieldset>
+      <input type="submit" id="submit-button" value="submit" />
+    </form>
+    <form>
+      <fieldset>
+        <legend>Do you like programming?</legend>
+        <p>
+          <label>
+            <input type="radio" id="yes" name="question" value="yes" checked />
+            Yes
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="radio" id="no" name="question" value="no" /> No
+          </label>
+        </p>
+      </fieldset>
+    </form>
+    <fieldset>
+      <legend>
+        What Programming languages do you like? (Choose More than One)
+      </legend>
+      <p>
+        <label> <input type="checkbox" checked /> HTML </label>
+      </p>
+      <p>
+        <label> <input type="checkbox" /> CSS </label>
+      </p>
+      <p>
+        <label> <input type="checkbox" /> Javascript </label>
+      </p>
+      <p>
+        <label> <input type="checkbox" /> Python </label>
+      </p>
+    </fieldset>
+    <fieldset>
+      <label for="experience-input"> Tell us about your Experience! </label>
+      <p>
+        <textarea id="experience-input" name="experience">
+      You had a ...
+          </textarea
+        >
+      </p>
+    </fieldset>
+    <fieldset>
+      <label for="genre-select"> What's Your favorite movie genre? </label>
+      <select name="genre" id="genre-select">
+        <option value="" disabled selected>--Please choose an option--</option>
+        <option value="action">Action</option>
+        <option value="adventure">Adventure</option>
+        <option value="comedy">Comedy</option>
+        <option value="documentary">documentary</option>
+        <option value="horror">Horror</option>
+        <option value="mystery">Mystery</option>
+        <option value="Anime">Anime</option>
+      </select>
+    </fieldset>
+    <fieldset>
+        <legend>form 1</legend>
+        <p>
+            <label for="color" >Favorite Color:</label>
+            <input type="text" name="color" id="color">
+        </p>
+    </fieldset>
+    <fieldset>
+        <legend>form 2</legend>
+        <p>
+            When was the Dec of Ind. written?
+        </p>
+        <p>
+          <label>
+            <input type="radio" id="1800" name="question" value="1800" />
+            1800
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="radio" id="1700" name="question" value="1700" /> 1700
+          </label>
+        </p>
+        <p>
+            <label>
+                <input type='radio' id='1750' name="question" value="1750">1750
+            </label>
+        </p>
+        <p><label><input type='radio' id='1776' name='question' value='1776'>1776</label>
+        </p>
+    </fieldset>
+    <fieldset>
+        <legend>form 3</legend>
+        <p>
+            <label>Choose music type: <select>
+                <option value='' disabled selected>Choose</option>
+                <option value='rock'>Rock</option>
+                <option value='classical'>Classical</option>
+                <option value='country'>Country</option>
+                <option value='skaaaaa'>Skaw</option>
+            </select>
+            </label>
+        </p>
+    </fieldset>
+    <fieldset>
+        <legend>Pizza Order</legend>
+        <p>Choose your crust:</p>
+        <p>
+            <label>
+                <input type="radio" id="crust" name="question" value="thin">Thin Crust
+                <input type="radio" id="crust" name="question" value="handtossed">Hand-Tossed
+            </label>
+            
+        </p>
+        <p>Choose your toppings:</p>
+        <p>
+            <label><input type='checkbox'>Pepporoni</label>
+            <label><input type='checkbox'>Jalepanos</label>
+            <label><input type='checkbox'>Sausage</label>
+            <label><input type='checkbox'>Cheese</label>
+        </p>
+        <p>Delivery/Pickup</p>
+        <p>
+            <label><input type="radio" id="del-pick" name="decision" value="delivery">Delivery</label>
+            <label><input type="radio" id="del-pick" name="decision" value="pick-up">Pick-Up</label>
+        </p>
+        <p>Address</p>
+        <p>
+            <label for="address">
+                <textarea name="address" id='adress'>Write Address Here...</textarea>
+            </label>
+            </p>
+        </p>
+        <p>
+            <label for="name">Full Name: <input type='text' value='Full Name' id='name'></label>
+        </p>
+        <p>Additional Instructions:</p>
+        <p>
+            <label for="instructions"><textarea id="instructions" name="instructions">Put Here...</textarea></label>
+        </p>
+    </fieldset>
+    <fieldset>
+        <legend>Credit Card Payment</legend>
+        <p>
+            <label for='first-name'>First Name: <input id='first-name' name='first-name' placeholder='First Name'></label>
+        </p>
+        <p>
+            <label for='last-name'>Last Name: <input id='last-name' name='last-name' placeholder='Last Name'></label>
+        </p>
+        <p>
+            <label for='email'>Email: <input id='email' name='email' placeholder='johnsmit@gmail.com'></label>
+        </p>
+        <p>
+            <label for='card-number'>Card Number: <input id='card-number' name='card-number' placeholder='XXXX-XXXX-XXXX-XXXX'></label>
+        </p>
+        <p>
+            <label for='exp'>Exp Date: <select id='exp'>
+                <option value='jan' selected>01</option>
+                <option value='feb'>02</option>
+                <option value='march'>03</option>
+                <option value='april'>04</option>
+                <option value='may'>05</option>
+                <option value='june'>06</option>
+                <option value='july'>07</option>
+                <option value='aug'>08</option>
+                <option value='sep'>09</option>
+                <option value='oct'>10</option>
+                <option value='nov'>11</option>
+                <option value='dec'>12</option>
+            </select><select id='exp'>
+                <option value='2021'>2021</option>
+                <option value='2022'>2022</option>
+                <option value='2023'>2023</option>
+                <option value='2024'>2024</option>
+                <option value='2025'>2025</option>
+            </select> </label>
+            <label for='csv'>CSV: <input id='csv' name='csv' placeholder="xxx"> </label>
+        </p>
+    </fieldset>
+    <fieldset>
+        <nav>
+            <label for='email'><p><input type="text" id='email'  placeholder="Email"></p></label>
+            <label for="password"><p><input type="text" id='password'  placeholder="Password"></p></label></label>
+            <button id='login-btn'>Login</button>
+            </nav>
+    </fieldset>
+    <fieldset>
+        <legend>User Sign-Up</legend>
+        <p>
+            <label for='first-name'>First Name: <input type="text" id='first-name' placeholder="First Name"></label>
+            <label for='last-name'>Last Name: <input type="text" id='last-name' placeholder="Last Name"></label>
+        </p>
+        <p>
+            <label for="email">Email: <input type="text" id="email" placeholder="johnsmith1@gmail.com"></label>
+        </p>
+        <p>
+            <label for="password">Password: <input type="text" id="password" placeholder="***********"></label>
+        </p>
+        <p>
+            <label for="phone">Phone Number: (<input type="text" id="phone" size='3' maxlength=3 placeholder="---">) <input type="text" size ='3'id="phone" maxlength=3 placeholder="---"> - <input type="text" id="phone" maxlength=4 size='4' placeholder="----"></label>
+        </p>
+        <p>
+            <label for='about'>Tell me about yourself:
+                <p>
+                    <textarea name="about" id="about" cols="30" rows="5" placeholder="Write here..."></textarea>
+                </p>
+            </label>
+        </p>
+        <p>
+            <label for="learn">Where did you hear about us? <select id="learn">
+                <option value='' disabled selected>Select One...</option>
+                <option value='friend'>From a friend</option>
+                <option value='internet'>Through the internet</option>
+                <option value='flier'>Flier</option>
+            </select></label>
+        </p>
+    </fieldset>
+    
+    </body>
+  </body>
+</html>
