@@ -446,9 +446,8 @@ const cipher = function (str, offset) {
   console.log(codeStr.join(""));
 };
 
-cipher(string, 13);
-
-
+cipher(string, 10);
+*/
 /*
 **********************************************************************************************
 ## Bonus: Caesar Cipher 2
@@ -460,7 +459,7 @@ Write a function decipher which is given a string, an offset, and returns the or
 'Genius without education is like silver in the mine'
 ```
 
-
+*/
 //////////////////////////////////////////
 ////////// answer ////////////////////////
 // **********
@@ -468,7 +467,7 @@ Write a function decipher which is given a string, an offset, and returns the or
 // **********
 
 const alph = "abcdefghijklmnopqrstuvwxyz";
-const string = "Travhf jvgubhg rqhpngvba vf yvxr fvyire va gur zvar";
+const string = "Wudyki myjxekj utksqjyed yi byau iybluh yd jxu cydu";
 const [...alphArr] = alph;
 const [...origAlph] = alph;
 
@@ -508,8 +507,7 @@ const decipher = function (str, offset) {
   console.log(codeStr.join(""));
 };
 
-decipher(string, 13);
-*/
+decipher(string, 10);
 
 /*
 # Function Exercises
