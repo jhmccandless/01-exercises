@@ -298,7 +298,7 @@ l337
 
 //////////////////////////////////////////
 ////////// answer ////////////////////////
-const string = "leet";
+const string = "loot";
 const leetTrans = {
   A: 4,
   E: 3,
@@ -312,7 +312,7 @@ const leetspeak = function (str) {
   const strUC = str.toUpperCase();
   const strUpdate = [];
   for (let i = 0; i < strUC.length; i++) {
-    if (leetTrans[strUC[i]]) {
+    if (leetTrans[strUC[i]] !== undefined) {
       strUpdate.push(leetTrans[strUC[i]]);
     } else {
       strUpdate.push(strUC[i].toLowerCase());
@@ -459,7 +459,7 @@ Write a function decipher which is given a string, an offset, and returns the or
 'Genius without education is like silver in the mine'
 ```
 
-*/
+
 //////////////////////////////////////////
 ////////// answer ////////////////////////
 // **********
@@ -508,6 +508,7 @@ const decipher = function (str, offset) {
 };
 
 decipher(string, 10);
+*/
 
 /*
 # Function Exercises
