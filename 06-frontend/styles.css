@@ -20,9 +20,30 @@
 .container {
   overflow: auto; /* don't forget to adjust the overflow */
   clear: both;
+  border-style: solid;
 }
 
 .sidebar {
   float: right;
   padding: 10px;
+  border-style: solid;
+}
+
+.sidebar-menu {
+  float: right;
+  overflow: auto;
+  list-style-type: none;
+  border-style: solid;
+}
+
+.side-bar-site {
+  margin: 0;
+  float: right !important;
+  position: relative;
+  text-align: left;
+  border-style: solid;
+}
+
+h2 {
+  border-style: solid;
 }
