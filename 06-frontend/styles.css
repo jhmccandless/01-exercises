@@ -1,12 +1,28 @@
-h1 {
-  background-color: gray;
-  font-size: 18;
+.header {
+  overflow: auto;
+  /* since all the elements are floating,
+     setting overflow will allow the rest of
+     the layout to flow properly */
+  background-color: aqua;
+}
+.header-menu {
+  float: right;
+  overflow: auto;
+  list-style-type: none;
 }
 
-body {
-  background-color: hotpink;
+.header-menu > li {
+  float: left;
+  overflow: auto;
+  padding-right: 10px; /* whitespace */
 }
 
-p {
-  font-family: Arial, Helvetica, sans-serif;
+.container {
+  overflow: auto; /* don't forget to adjust the overflow */
+  clear: both;
+}
+
+.sidebar {
+  float: right;
+  padding: 10px;
 }
