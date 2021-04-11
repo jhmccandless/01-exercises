@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .box {
+        background-color: darkred;
+        color: gold;
+        width: 150px;
+        height: 150px;
+        margin: 16px;
+        text-align: center;
+        font-size: 2rem;
+      }
+
+      .box-of-boxes {
+        display: flex;
+      }
+
+      @media only screen and (min-width: 720px) {
+        .box-four {
+          height: 200px;
+        }
+      }
+
+      @media only screen and (min-width: 720px) {
+        .box-two {
+          background-color: blue;
+        }
+        .box-three {
+          background-color: green;
+        }
+      }
+
+      @media only screen and (max-width: 1100px) {
+        .box-one {
+          width: 200px;
+        }
+        .box-three {
+          width: 400px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box-of-boxes">
+      <div class="box box-one">1</div>
+      <div class="box box-two">2</div>
+      <div class="box box-three">3</div>
+      <div class="box box-four">4</div>
+    </div>
+  </body>
+</html>

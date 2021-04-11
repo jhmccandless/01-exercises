@@ -14,7 +14,7 @@
 .header-menu > li {
   float: left;
   overflow: auto;
-  padding-right: 10px; /* whitespace */
+  padding-right: 30px;
 }
 
 .container {
@@ -45,5 +45,78 @@
 }
 
 h2 {
+  border-style: solid;
+}
+
+.grid {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.grid-item {
+  float: left;
+  width: 200px;
+  height: 200px;
+  background-color: gray;
+  border-style: solid;
+}
+
+/* .grid-item:nth-child(odd) {
+  background-color: #eee;
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+.layout {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.layout-header {
+  overflow: auto;
+  margin-bottom: 20px;
+  border-style: solid;
+}
+
+.layout-sidebar {
+  float: right;
+  padding: 10px;
+  width: 25%;
+  border-style: solid;
+}
+
+.layout-main {
+  width: 75%;
+}
+
+.header-menu {
+  float: right;
+  list-style-type: none;
+  border-style: solid;
+}
+
+.header-menu-item {
+  float: left;
+  padding-right: 10px;
+}
+
+.header-title {
+  margin: 10px;
+  border-style: solid;
+}
+
+.sidebar-title {
+  margin: 0;
+}
+
+.main-title {
+  margin: 0;
+}
+
+.layout-footer {
+  clear: both;
+  text-align: center;
   border-style: solid;
 }
