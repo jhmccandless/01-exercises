@@ -1,0 +1,300 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  height: 600px;
+  width: 600px;
+  flex-direction: row;
+  /* border-style: solid; */
+  justify-content: center;
+}
+
+.column-1 {
+  display: flex;
+  flex-direction: column;
+  /* border-style: solid; */
+  flex-grow: 1;
+  height: 100%;
+  width: 50px;
+}
+
+.column-2 {
+  display: flex;
+  flex-direction: column;
+  /* border-style: solid; */
+  flex-grow: 1;
+  height: 100%;
+  width: 50px;
+}
+.column-3 {
+  display: flex;
+  flex-direction: column;
+  /* border-style: solid; */
+  flex-grow: 2;
+  height: 100%;
+  width: 50px;
+}
+.column-4 {
+  display: flex;
+  flex-direction: column;
+  /* border-style: solid; */
+  flex-grow: 2;
+  height: 100%;
+  width: 50px;
+}
+.column-5 {
+  display: flex;
+  flex-direction: column;
+  /* border-style: solid; */
+  flex-grow: 1;
+  height: 100%;
+  width: 50px;
+}
+
+.col1-row1 {
+  display: flex;
+  /* border-style: solid; */
+  flex-grow: 4;
+  height: 50px;
+  width: 100%;
+}
+.col1-row2 {
+  border-style: solid;
+  flex-grow: 1;
+  height: 50px;
+  width: 100%;
+}
+.col1-row3 {
+  border-style: solid;
+  flex-grow: 1;
+  height: 50px;
+  width: 100%;
+}
+.col1-row4 {
+  border-style: solid;
+  flex-grow: 1;
+  height: 50px;
+  width: 100%;
+}
+
+.col1-row1-col1 {
+  border-style: solid;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.col1-row1-col2 {
+  border-style: solid;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.col2-row1 {
+  border-style: solid;
+  flex-grow: 1;
+  height: 50px;
+  width: 100%;
+}
+
+.col2-row2 {
+  display: flex;
+  /* border-style: solid; */
+  flex-grow: 1;
+  height: 50px;
+  width: 100%;
+}
+
+.col2-row3 {
+  border-style: solid;
+  flex-grow: 1;
+  height: 50px;
+  width: 100%;
+}
+
+.col2-row4 {
+  border-style: solid;
+  flex-grow: 1;
+  height: 50px;
+  width: 100%;
+}
+
+.col2-row2-col1 {
+  border-style: solid;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.col2-row2-col2 {
+  border-style: solid;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.col3-row1 {
+  border-style: solid;
+  flex-grow: 1;
+  height: 50px;
+  width: 100%;
+}
+
+.col3-row2 {
+  display: flex;
+  border-style: solid;
+  flex-grow: 1;
+  height: 50px;
+  width: 100%;
+}
+
+.col3-row3 {
+  display: flex;
+  /* border-style: solid; */
+  flex-grow: 1;
+  height: 50px;
+  width: 100%;
+}
+
+.col3-row4 {
+  border-style: solid;
+  flex-grow: 1;
+  height: 50px;
+  width: 100%;
+}
+
+.col3-row5 {
+  border-style: solid;
+  flex-grow: 2;
+  height: 50px;
+  width: 100%;
+}
+
+.col3-row6 {
+  border-style: solid;
+  flex-grow: 2;
+  height: 50px;
+  width: 100%;
+}
+
+.col3-row3-col1 {
+  border-style: solid;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.col3-row3-col2 {
+  border-style: solid;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.col4-row1 {
+  border-style: solid;
+  flex-grow: 1;
+  height: 50px;
+  width: 100%;
+}
+
+.col4-row2 {
+  display: flex;
+  border-style: solid;
+  flex-grow: 2;
+  height: 50px;
+  width: 100%;
+}
+
+.col4-row3 {
+  display: flex;
+  border-style: solid;
+  flex-grow: 1;
+  height: 50px;
+  width: 100%;
+}
+
+.col4-row4 {
+  display: flex;
+  border-style: solid;
+  flex-grow: 1;
+  height: 50px;
+  width: 100%;
+}
+
+.col4-row5 {
+  border-style: solid;
+  flex-grow: 2;
+  height: 50px;
+  width: 100%;
+}
+
+.col4-row6 {
+  display: flex;
+  border-style: solid;
+  flex-grow: 1;
+  height: 50px;
+  width: 100%;
+}
+
+.col4-row4-col1,
+.col4-row4-col2 {
+  border-style: solid;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.col4-row6-col1,
+.col4-row6-col2 {
+  border-style: solid;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.col5-row1 {
+  display: flex;
+  border-style: solid;
+  flex-grow: 1;
+  height: 50px;
+  width: 100%;
+}
+
+.col5-row2 {
+  display: flex;
+  border-style: solid;
+  flex-grow: 1;
+  height: 50px;
+  width: 100%;
+}
+
+.col5-row3 {
+  display: flex;
+  border-style: solid;
+  flex-grow: 1;
+  height: 50px;
+  width: 100%;
+}
+
+.col5-row4 {
+  display: flex;
+  border-style: solid;
+  flex-grow: 1;
+  height: 50px;
+  width: 100%;
+}
+
+.col5-row5 {
+  border-style: solid;
+  flex-grow: 1;
+  height: 50px;
+  width: 100%;
+}
+
+.col5-row1-col1 {
+  border-style: solid;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.col5-row1-col2 {
+  border-style: solid;
+  flex-grow: 1;
+  height: 100%;
+}
