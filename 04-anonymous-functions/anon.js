@@ -125,7 +125,7 @@ const r6 = filter(nums, isEven);
 const r7 = filter(nums, isOdd);
 console.log(r6, r7);
 
-const greetings = ["hello", "how are you?", "good to see you!"];
-const result = map(greetings, (s) => s.toUpperCase());
-console.log(result);
-console.log(greetings);
+// const greetings = ["hello", "how are you?", "good to see you!"];
+// const result = map(greetings, (s) => s.toUpperCase());
+// console.log(result);
+// console.log(greetings);

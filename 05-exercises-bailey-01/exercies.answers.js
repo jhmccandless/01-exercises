@@ -173,7 +173,7 @@ Write a function `printSquare` which is given a size and prints a square of that
 *****
 *****
 ```
-
+*/
 //////////////////////////////////////////
 ////////// answer ////////////////////////
 const printSquare = function (size) {
@@ -188,8 +188,6 @@ const printSquare = function (size) {
 };
 
 printSquare(5);
-
-*/
 
 /*
 **********************************************************************************************
@@ -466,8 +464,10 @@ Write a function decipher which is given a string, an offset, and returns the or
 // able to use the same code from cipher??? just changed the name to decipher
 // **********
 
+
 const alph = "abcdefghijklmnopqrstuvwxyz";
-const string = "Wudyki myjxekj utksqjyed yi byau iybluh yd jxu cydu";
+const string = "Travhf jvgubhg rqhpngvba vf yvxr fvyire va gur zvar";
+const toOffset = 13;
 const [...alphArr] = alph;
 const [...origAlph] = alph;
 
@@ -485,13 +485,13 @@ const decipher = function (str, offset) {
     }
   };
   upperCaseCheck(string);
-  const alphToCipher = function (alphebet) {
+  const alphToDecipher = function (alphebet) {
     for (let i = 0; i < alphebet.length - offset; i++) {
       alphArr.push(alphebet[i]);
       alphArr.shift(alphebet);
     }
   };
-  alphToCipher(alph);
+  alphToDecipher(alph);
   const [...strArr] = str.toLowerCase();
   for (let i = 0; i < strArr.length; i++) {
     let letter = alphArr[origAlph.indexOf(strArr[i])];
@@ -507,7 +507,7 @@ const decipher = function (str, offset) {
   console.log(codeStr.join(""));
 };
 
-decipher(string, 10);
+decipher(string, toOffset);
 */
 
 /*
@@ -815,6 +815,7 @@ Write a function acronym that takes an array of words as argument and returns th
 'NASA'
 ```
 
+
 //////////////////////////////////////////
 ////////// answer ////////////////////////
 const words = ["very", "important", "person"];
@@ -824,6 +825,7 @@ const acronym = function (arr) {
   for (let i = 0; i < arr.length; i++) {
     wordBegin.push(arr[i][0]);
   }
+  // console.log(wordBegin);
   const allFirstLetters = function (init, el) {
     return init + el;
   };
